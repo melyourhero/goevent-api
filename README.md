@@ -60,17 +60,17 @@ set NODE_ENV=test
 npm test
 ```
 
-#API specification:
+# API specification:
 
-* ##URL
+* URL
  
   events
 
-* ###Method:
+* Method:
   
   `GET`
   
-* ###URL Params
+* URL Params
 
   Not-required:
 
@@ -80,11 +80,11 @@ npm test
   
   `fields=[string]`
 
-* ###Data Params
+* Data Params
 
   None
 
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
@@ -109,7 +109,7 @@ npm test
     }
 ```
 
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 400 Bad Request - when user passed invalid parameters
@@ -117,7 +117,7 @@ npm test
   - 500 Internal Server Error - when server have problem with caching data to memory
   - 502 Bad Gateway - when server have problem with getting data from redis 
 
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -129,25 +129,25 @@ npm test
   });
   ```
   
-* ##URL
+* URL
  
   events/:id
 
-* ###Method:
+* Method:
   
   `GET`
   
-* ###Identificator 
+* Identificator 
 
   Required:
 
   `id=[integer]`
 
-* ###Data Params
+* Data Params
 
   None
 
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
@@ -172,7 +172,7 @@ npm test
     }
 ```
 
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 400 Bad Request - when user passed invalid parameters
@@ -180,7 +180,7 @@ npm test
   - 500 Internal Server Error - when server have problem with request to database
   - 502 Bad Gateway - when server have problem with getting data from redis
   
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -192,15 +192,15 @@ npm test
   });
   ```
   
-* ##URL
+* URL
  
   events-location
 
-* ###Method:
+* Method:
   
   `GET`
   
-* ###URL Params
+* URL Params
 
   Required:
 
@@ -220,11 +220,11 @@ npm test
   
   Note: date entered in the following format - YYYY-MM-DD
 
-* ###Data Params
+* Data Params
 
   None
 
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
@@ -249,13 +249,13 @@ npm test
     }
 ```
 
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 400 Bad Request - when user passed invalid parameters
   - 502 Bad Gateway - when server received invalid response from the upstream server
 
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -267,19 +267,19 @@ npm test
   });
   ```
   
-* ##URL
+* URL
  
   user/login
 
-* ###Method:
+* Method:
   
   `POST`
   
-* ###URL Params
+* URL Params
 
   None
 
-* ###Data Params
+* Data Params
 
   Required:
 
@@ -287,17 +287,17 @@ npm test
  
  `password=[string]`
 
-* ###Success Response:
+* Success Response:
 
   Code: 200   
 
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 400 Bad Request - when user entered invalid password
   - 404 Not Found - when user wasn't found by passed data
 
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -313,32 +313,32 @@ npm test
   });
   ```  
 
-* ##URL
+* URL
  
   user/logout
 
-* ###Method:
+* Method:
   
   `POST`
   
-* ###URL Params
+* URL Params
 
   None
 
-* ###Data Params
+* Data Params
 
   None
 
-* ###Success Response:
+* Success Response:
 
   Code: 200   
 
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 404 Not Found - when session expired and deleted from database
 
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -350,23 +350,23 @@ npm test
   });
   ``` 
      
-* ##URL
+* URL
  
   user/events
 
-* ###Method:
+* Method:
   
   `GET`
   
-* ###URL Params
+* URL Params
 
   None
 
-* ###Data Params
+* Data Params
 
   None
 
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
@@ -392,13 +392,13 @@ npm test
     }
 ```
 
-* ###Error Response:
+* Error Response:
 
   Code:
   - 401 Unauthorized - when server has'n found the session and the user isn't logged in
   - 404 Not found - when server didn't find any events for unique user  
 
-* ###Sample Call:
+* Sample Call:
 
   ```javascript
   $.ajax({
@@ -410,36 +410,36 @@ npm test
   });
   ```
   
-* ##URL
+* URL
  
   user/events/:id
 
-* ###Method:
+* Method:
   
   `POST`
   
-* ###Identificator
+* Identificator
 
   Required:
 
   `id=[integer]`
  
-* ###Data Params
+* Data Params
   
   None
   
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 401 Unauthorized - when server has'n found the session and the user isn't logged in
   - 404 Not Found - event was not found at the specified id
   - 500 Internal Server Error - when server have error with saving event to database
   
-* ###Sample Call:
+* Sample Call:
  
     ```javascript
     $.ajax({
@@ -451,36 +451,36 @@ npm test
     });
     ```
 
-* ##URL
+* URL
  
   user/events/:id
 
-* ###Method:
+* Method:
   
   `DELETE`
   
-* ###Identificator
+* Identificator
 
   Required:
 
   `id=[integer]`
  
-* ###Data Params
+* Data Params
   
   None
   
-* ###Success Response:
+* Success Response:
 
   Code: 200 
   
-* ###Error Response:
+* Error Response:
 
   Code: 
   - 401 Unauthorized - when server has'n found the session and the user isn't logged in
   - 404 Not Found - event was not found at the specified id
   - 500 Internal Server Error - when server have error with saving event to database
   
-* ###Sample Call:
+* Sample Call:
  
     ```javascript
     $.ajax({
